@@ -1,0 +1,135 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.top-nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+.top-nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.top-nav a.active {
+  color: #38bdf8;
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.nav-cards {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav-cards a {
+  display: block;
+  padding: 1rem 1.25rem;
+  background: #1e293b;
+  border-radius: 10px;
+  color: #e2e8f0;
+  text-decoration: none;
+  border: 1px solid #334155;
+}
+
+.nav-cards a:hover {
+  border-color: #38bdf8;
+}
+
+.player-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.player-card .artist {
+  color: #94a3b8;
+  margin-top: -0.5rem;
+}
+
+.player-card .position {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.address-bar {
+  flex: 1;
+  color: #94a3b8;
+  font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+button {
+  background: #334155;
+  color: #e2e8f0;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover:not(:disabled) {
+  background: #475569;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.song-list {
+  padding-left: 1.25rem;
+}
+
+.song-list li {
+  padding: 0.35rem 0;
+  color: #94a3b8;
+}
+
+.song-list li.active {
+  color: #38bdf8;
+  font-weight: 700;
+}
