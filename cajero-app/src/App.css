@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f5f7;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.app h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.persona-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.persona-form input {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.persona-form button {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: #2f8f5b;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.persona-form button:hover {
+  background: #256e46;
+}
+
+.cola-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.cola-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+}
+
+.cola-list li.next-up {
+  border-color: #2f8f5b;
+}
+
+.cola-list .meta,
+.cola-list .time {
+  display: block;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.cola-list button {
+  border: none;
+  background: #2f8f5b;
+  color: white;
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.cola-list button:hover {
+  background: #256e46;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+}
