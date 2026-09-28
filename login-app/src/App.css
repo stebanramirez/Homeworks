@@ -1,0 +1,207 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f5f7;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #1a1a1a;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a2e;
+  padding: 0.9rem 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.nav-user button {
+  background: #e5484d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav-user button:hover {
+  background: #c93c40;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-form {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.login-form h1 {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+    color: #1a1a1a;
+}
+
+.login-form input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.login-form button {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: #4a6fa5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background: #3b5a86;
+}
+
+.login-form .error {
+  color: #c93c40;
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 0;
+}
+
+.content {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.content h1 {
+  margin-bottom: 0.25rem;
+    color: #1a1a1a;
+}
+
+.subtitle {
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.book-form,
+.persona-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.book-form input,
+.persona-form input {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.book-form button,
+.persona-form button {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: #2f8f5b;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.book-form button:hover,
+.persona-form button:hover {
+  background: #256e46;
+}
+
+.book-list,
+.cola-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.book-list li,
+.cola-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+}
+
+.book-list li.top-item,
+.cola-list li.top-item {
+  border-color: #2f8f5b;
+}
+
+.book-list .meta,
+.cola-list .meta {
+  display: block;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.book-list button,
+.cola-list button {
+  border: none;
+  background: #2f8f5b;
+  color: white;
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+}
