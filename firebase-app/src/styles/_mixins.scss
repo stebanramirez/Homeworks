@@ -1,0 +1,7 @@
+﻿// centra cualquier cosa en la pantalla
+@mixin centrar($alto: 100vh) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: $alto;
+}
