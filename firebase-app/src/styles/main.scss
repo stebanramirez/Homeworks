@@ -1,0 +1,93 @@
+﻿@use "variables" as *;
+@use "mixins" as *;
+
+body {
+  margin: 0;
+  background: $color-fondo;
+  color: $color-texto;
+}
+
+.centered {
+  @include centrar;
+}
+
+.centered-inline {
+  @include centrar(120px);
+}
+
+.app-navbar {
+  background: $color-oscuro;
+
+  .nav-user {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+  }
+}
+
+.auth-card {
+  width: 340px;
+  border-radius: $radio;
+
+  h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: $color-texto;
+    margin-bottom: 1.25rem;
+  }
+
+  .auth-link {
+    text-align: center;
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+  }
+}
+
+.tasks-page {
+  max-width: 600px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  h1 {
+    color: $color-texto;
+    margin-bottom: 0.25rem;
+  }
+
+  .subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+
+  .empty {
+    text-align: center;
+    color: #888;
+  }
+
+  .task-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .task-list .list-group-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    .task-title {
+      flex: 1;
+    }
+
+    .task-actions {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    &.done .task-title {
+      text-decoration: line-through;
+      color: $color-hecho;
+    }
+  }
+}
