@@ -1,0 +1,133 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f5f7;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #1a1a1a;
+}
+
+.pagina {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.pagina h1 {
+  margin: 0 0 0.25rem;
+  color: #1a1a1a;
+}
+
+.subtitulo {
+  margin: 0 0 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.formularios {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.formularios form {
+  flex: 1;
+  min-width: 260px;
+}
+
+.formularios input {
+  width: calc(100% - 90px);
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.formularios button {
+  width: 80px;
+  margin-left: 6px;
+  padding: 0.55rem;
+  border: none;
+  border-radius: 6px;
+  background: #4a6fa5;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.formularios button:hover {
+  background: #3b5a86;
+}
+
+.mensaje {
+  min-height: 1.2rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.arbol-visual {
+  width: 100%;
+  height: 520px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+.arbol-visual .rd3t-link {
+  stroke: #9aa5b5;
+  stroke-width: 2;
+}
+
+.nodo-circulo {
+  fill: #4a6fa5;
+  stroke: #2f4a73;
+  stroke-width: 2;
+}
+
+.nodo-hoja {
+  fill: #2f8f5b;
+  stroke: #256e46;
+}
+
+.nodo-encontrado {
+  fill: #e5a100;
+  stroke: #b57f00;
+  stroke-width: 4;
+}
+
+.nodo-texto {
+  fill: white;
+  stroke: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.recorridos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.recorrido {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+}
+
+.recorrido h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: #4a6fa5;
+}
+
+.recorrido p {
+  margin: 0;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
