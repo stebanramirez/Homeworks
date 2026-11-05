@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f3f5f9;
+  color: #1d2433;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+input {
+  padding: 8px 10px;
+  border: 1px solid #c5ccda;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.fila {
+  display: flex;
+  gap: 8px;
+}
+
+.fila input {
+  flex: 1;
+}
+
+.fila .corto {
+  flex: 0 0 70px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #2f6fed;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1f58c9;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+ol.lista {
+  counter-reset: n;
+}
+
+ol.lista li::before {
+  counter-increment: n;
+  content: counter(n) ".";
+  margin-right: 8px;
+  color: #6b7690;
+}
+
+.lista li {
+  display: flex;
+  padding: 8px 10px;
+  background: #eef2fb;
+  border-radius: 6px;
+}
+
+.lista li span {
+  flex: 1;
+}
+
+.error {
+  color: #c0392b;
+  margin: 0;
+}
+
+.mensaje {
+  color: #2a7a3b;
+  margin: 0;
+}
+
+.vacio {
+  color: #6b7690;
+  margin: 0;
+}
