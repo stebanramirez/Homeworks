@@ -1,0 +1,23 @@
+// Variables reutilizables del dashboard.
+$color-acento: #e8590c;
+$color-marca: #c2410c;
+$color-marca-suave: #fff0e6;
+$color-fondo: #fff8f0;
+$color-tarjeta: #ffffff;
+$color-texto: #2b1d14;
+$color-apagado: #6b5a4e;
+$color-linea: #eadfd3;
+
+// Mapa de estados: se usa con @each para generar una clase por cada uno.
+$estados: (
+  'oro': #f59f00,
+  'plata': #868e96,
+  'bronce': #b9722d,
+  'normal': $color-marca,
+);
+
+$radio-tarjeta: 16px;
+$radio-pildora: 999px;
+$espacio: 8px;
+$fuente-titulos: 'Poppins', sans-serif;
+$ancho-tablet: 760px;

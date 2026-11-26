@@ -1,0 +1,169 @@
+@use '../../styles/dashboard' as d;
+
+// Estilo base compartido: los demas bloques lo extienden con @extend.
+%panel {
+  @include d.tarjeta;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  color: d.$color-texto;
+
+  h1 {
+    font-family: d.$fuente-titulos;
+    font-size: 36px;
+    margin: 0 0 4px;
+  }
+}
+
+.subtitulo {
+  color: d.$color-apagado;
+  margin: 0 0 24px;
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: d.$espacio * 3;
+
+  @include d.hasta-tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  @extend %panel;
+  display: flex;
+  flex-direction: column;
+  gap: d.$espacio * 1.5;
+
+  h2 {
+    font-family: d.$fuente-titulos;
+    font-size: 20px;
+    margin: 0;
+  }
+}
+
+.completo {
+  grid-column: 1 / -1;
+}
+
+.fila {
+  display: flex;
+  gap: d.$espacio;
+  flex-wrap: wrap;
+}
+
+.campo {
+  flex: 1 1 200px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid d.$color-linea;
+  border-radius: 12px;
+  font: inherit;
+  background: #fff;
+}
+
+.boton {
+  @include d.boton;
+}
+
+.botonSuave {
+  @include d.boton(#fff, d.$color-marca);
+  border-color: d.$color-linea;
+}
+
+.estado {
+  font-weight: 600;
+  margin: 0;
+
+  &.existe {
+    color: #2b8a3e;
+  }
+
+  &.noExiste {
+    color: #c92a2a;
+  }
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: d.$espacio;
+}
+
+.cancion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: d.$espacio * 1.5;
+  padding: 10px 14px;
+  border: 1px solid d.$color-linea;
+  border-radius: 12px;
+  background: d.$color-fondo;
+
+  small {
+    color: d.$color-apagado;
+  }
+}
+
+.sugerencia {
+  @extend .cancion;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  width: 100%;
+
+  &:hover {
+    background: d.$color-marca-suave;
+  }
+}
+
+.puesto {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-weight: 700;
+  flex: none;
+}
+
+// Una clase por cada entrada del mapa $estados: .puesto-oro, .puesto-plata...
+@each $nombre, $color in d.$estados {
+  .puesto-#{$nombre} {
+    @include d.insignia($nombre);
+  }
+}
+
+.rankingItem {
+  display: flex;
+  align-items: center;
+  gap: d.$espacio * 1.5;
+}
+
+.rankingCuerpo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.barra {
+  @include d.barra;
+}
+
+.distancia {
+  padding: 2px 12px;
+  border-radius: d.$radio-pildora;
+  font-size: 13px;
+  font-weight: 600;
+  background: d.$color-marca-suave;
+  color: d.$color-marca;
+}
